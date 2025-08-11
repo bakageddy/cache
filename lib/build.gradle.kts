@@ -6,6 +6,8 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
+groupId 'dev.bakageddy'
+
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
