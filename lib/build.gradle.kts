@@ -6,8 +6,6 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-groupId 'dev.bakageddy'
-
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
@@ -24,6 +22,7 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation(libs.guava)
+	implementation("com.github.ben-manes.caffeine:caffeine:3.2.2")
 }
 
 testing {
@@ -42,3 +41,5 @@ java {
         languageVersion = JavaLanguageVersion.of(17)
     }
 }
+
+group = "dev.bakageddy"

@@ -72,6 +72,7 @@ public class LRU<Key, Value> implements CacheAlgorithm<Key, Value> {
 		return Optional.empty();
 	}
 
+	// This method is not thread safe
 	@Override
 	public void evict(Key key) {
 		if (!map.containsKey(key)) {
@@ -82,5 +83,14 @@ public class LRU<Key, Value> implements CacheAlgorithm<Key, Value> {
 		map.remove(key);
 		Node.remove_self(node);
 		return;
+	}
+
+	@Override
+	public void flush() {
+		return flush(false);
+	}
+
+	@Override
+	public void flush(bool stale) {
 	}
 }

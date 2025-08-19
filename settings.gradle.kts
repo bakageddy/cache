@@ -12,5 +12,4 @@ plugins {
 }
 
 rootProject.name = "cache"
-rootProject.groupId = "dev.bakageddy"
 include("lib")

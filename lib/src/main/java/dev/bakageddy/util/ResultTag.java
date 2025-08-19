@@ -1,4 +1,4 @@
-package dev.bakageddy;
+package dev.bakageddy.cache.util;
 
 public enum ResultTag {
 	Ok,
